@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pirates</title>
+</head>
+<body>
+    <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div> 
+
+    <div class="login-wrapper">
+        <h2>Welcome To Pixel Pirates</h2>
+        <h3>First Challenge is accesing the home page</h3>
+        <form onsubmit="event.preventDefault(); validateMyForm();">
+            <input type="text" name="username" id="username" placeholder="username">
+            <input type="text" name="password" id="password" placeholder="password">
+            <input type="submit" value="submit">
+        </form>
+
+        <script>
+            console.log("Username: Admin");
+            console.log("Password: 1234");  
+
+            setTimeout(function() { hint() }, 30000);
+
+            function hint() {
+                //alert("Try open the console!");
+            }
+
+            function validateMyForm() {
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+
+                if (username == "Admin" && password == "1234") {
+                    alert("congrats")
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
